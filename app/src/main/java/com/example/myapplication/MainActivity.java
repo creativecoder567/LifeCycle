@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -41,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
             }
         });
-        android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
+     /*   android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.layout, first);
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
         Log.d(SARATH, "activitylifecycle onCreate invoked");
+        startActivity(new Intent(this,AnotherActivity.class));
+//        finish();
     }
 
     @Override
